@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 35px auto;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+
+/* Sections */
+
+.section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+
+/* KPI Cards */
+
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.kpi-card {
+    padding: 22px;
+    background: #f7f8fa;
+    border: 1px solid #e2e5e9;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.kpi-card h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+
+.kpi-card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+th {
+    background: #f0f2f5;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* Buttons */
+
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    font-size: 13px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* Status */
+
+.status-up {
+    font-weight: bold;
+}
+
+.status-down {
+    font-weight: bold;
+}
+
+
+/* Mobile / Tablet */
+
+@media (max-width: 900px) {
+
+    .kpi-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .kpi-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 18px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    /* Network Status */
+
+    .status-up {
+        color: #198754;
+        font-weight: bold;
+    }
+
+    .status-down {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    .status-not-checked {
+        color: #777;
+        font-weight: bold;
+    }
+}

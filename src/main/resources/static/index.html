@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Network Monitoring Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Network Monitoring Dashboard</h1>
+
+    <p class="subtitle">
+        Monitor host availability, response time, network KPIs and incidents
+    </p>
+
+
+    <!-- Dashboard Overview -->
+
+    <div class="section">
+
+        <h2>Dashboard Overview</h2>
+
+        <div class="kpi-container">
+
+            <div class="kpi-card">
+                <h3>Total Hosts</h3>
+                <p id="totalHosts">-</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>UP Hosts</h3>
+                <p id="upHosts">-</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>DOWN Hosts</h3>
+                <p id="downHosts">-</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>Overall Availability</h3>
+                <p id="overallAvailability">-</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Monitored Hosts -->
+
+    <div class="section">
+
+        <h2>Monitored Hosts</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Host Name</th>
+                <th>IP Address</th>
+                <th>Status</th>
+                <th>Response Time</th>
+                <th>Action</th>
+            </tr>
+
+            </thead>
+
+            <tbody id="hostTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- Selected Host KPI -->
+
+    <div class="section">
+
+        <h2>Selected Host KPI Summary</h2>
+
+        <div class="kpi-container">
+
+            <div class="kpi-card">
+                <h3>Total Checks</h3>
+                <p id="totalChecks">-</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>Availability</h3>
+                <p id="availability">-</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>Failures</h3>
+                <p id="failures">-</p>
+            </div>
+
+            <div class="kpi-card">
+                <h3>Avg Response Time</h3>
+                <p id="avgResponse">-</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Monitoring History -->
+
+    <div class="section">
+
+        <h2>Monitoring History</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+                <th>Status</th>
+                <th>Response Time</th>
+                <th>Error</th>
+                <th>Checked At</th>
+            </tr>
+
+            </thead>
+
+            <tbody id="historyTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- Network Incidents -->
+
+    <div class="section">
+
+        <h2>Network Incidents</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+                <th>Incident Type</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Created At</th>
+            </tr>
+
+            </thead>
+
+            <tbody id="incidentTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
